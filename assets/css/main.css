@@ -153,7 +153,7 @@ a:hover
 
     border-width: 0 15rem 15rem 0;
     border-style: solid;
-    border-color: transparent #d80247 transparent transparent;
+    border-color: transparent #492a0a transparent transparent;
 }
 
 .navigation-button p:hover:after
@@ -235,7 +235,7 @@ a:hover
 
     opacity: 1;
     border-radius: 100%;
-    background-color: #d80f48;
+    background-color: #492a0a;
 }
 
 .preloader.hide-preloader .bounce
@@ -432,7 +432,7 @@ a:hover
 
     color: #fff;
     border-radius: 100px;
-    background: #d80f48;
+    background: #492a0a;
 }
 
 
@@ -535,7 +535,7 @@ a:hover
 
     border-width: 0 10rem 10rem 0;
     border-style: solid;
-    border-color: transparent #d80247 transparent transparent;
+    border-color: transparent #492a0a transparent transparent;
 }
 
 .featherlight .featherlight-content
@@ -568,7 +568,7 @@ a:hover
 
 .featherlight .featherlight-close-icon:hover
 {
-    background: #d80f48;
+    background: #492a0a;
 }
 
 .featherlight-next,
@@ -616,7 +616,7 @@ a:hover
 .featherlight-next:hover,
 .featherlight-previous:hover
 {
-    background: #d80f48;
+    background: #492a0a;
 }
 
 .featherlight-previous
@@ -724,7 +724,7 @@ a:hover
 
     color: #fff;
     border-radius: 100%;
-    background: #d80f48;
+    background: #492a0a;
 }
 
 .footer .social-icons li:hover
@@ -796,5 +796,5 @@ a:hover
 
     color: #fff;
     border-radius: 100px;
-    background: #d80f49;
+    background: #492a0a;
 }
