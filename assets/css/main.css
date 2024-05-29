@@ -439,7 +439,6 @@ a:hover
 
 /** 5. Portfolio
 *******************************************************************/
-
 .portfolio
 {
     font-size: 0;
@@ -490,7 +489,6 @@ a:hover
     background-position: center;
     background-size: cover;
 }
-
 .portfolio .item i
 {
     font-size: 2.5rem;
