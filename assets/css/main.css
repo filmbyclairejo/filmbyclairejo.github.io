@@ -30,15 +30,16 @@ html
 body
 {
     font-family: 'Bellefair', serif;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
 
     overflow-x: hidden;
 
-    color: #111;
+    color: #000;
     background: #fff;
 
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 h1,
@@ -53,7 +54,7 @@ a
     font-family: 'Bellefair', serif;
     font-weight: normal;
 
-    color: #111;
+    color: #000;
 }
 
 h1
@@ -89,6 +90,12 @@ h6
 p
 {
     font-size: 1.8rem;
+}
+
+strong, b
+{
+    font-weight: 700;
+    color: #000;
 }
 
 a,
