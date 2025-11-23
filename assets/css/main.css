@@ -815,3 +815,14 @@ a:hover
     border-radius: 100px;
     background: #492a0a;
 }
+
+/* Force bold rendering - add at the very end */
+strong, b, .bold-text
+{
+    font-weight: 700 !important;
+    color: #000 !important;
+    -webkit-font-smoothing: subpixel-antialiased !important;
+    -moz-osx-font-smoothing: auto !important;
+    text-rendering: optimizeLegibility !important;
+    text-shadow: 0 0 0.01em #000, 0 0 0.01em #000 !important;
+}
