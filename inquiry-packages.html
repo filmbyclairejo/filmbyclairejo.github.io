@@ -1,0 +1,442 @@
+<!doctype html>
+
+<html lang="en">
+
+
+    <head>
+
+
+        <!-- META -->
+        <meta charset="utf-8">
+        <meta name="robots" content="noodp">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <!-- PAGE TITLE -->
+        <title>filmbyclairejo &mdash; inquiry &amp; packages</title>
+
+        <!-- FAVICON -->
+        <link rel="shortcut icon" href="assets/img/icon2.png">
+
+        <!-- FONTS -->
+        <link href="https://fonts.googleapis.com/css?family=Bellefair&amp;subset=latin-ext" rel="stylesheet">
+
+        <!-- STYLESHEETS -->
+        <link rel="stylesheet" type="text/css" href="assets/css/plugins.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+        <style>
+            /* ===== Package section selector ===== */
+            .package-tabs {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1.5rem 3rem;
+                margin-bottom: 4rem;
+            }
+
+            .package-tab {
+                font-family: 'Bellefair', serif;
+                font-size: 1.8rem;
+                background: none;
+                border: none;
+                padding: .6rem 1rem;
+                cursor: pointer;
+                color: #555;
+                text-transform: uppercase;
+                letter-spacing: .08em;
+                border-bottom: 2px solid transparent;
+                transition: color .15s ease, border-color .15s ease;
+            }
+
+            .package-tab:hover {
+                color: #492a0a;
+            }
+
+            .package-tab.active {
+                color: #111;
+                border-bottom-color: #492a0a;
+            }
+
+            .package-panel {
+                display: none;
+                animation: fadeIn .25s ease;
+                margin-bottom: 2.4em;
+            }
+
+            .package-panel.active {
+                display: block;
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(4px); }
+                to   { opacity: 1; transform: translateY(0); }
+            }
+
+            /* ===== Inquiry form (matches about-page vibe) ===== */
+            .inquiry-form {
+                max-width: 50rem;
+                margin: 4rem auto 0;
+                padding: 2.5rem;
+                border: 1px solid #ddd;
+                background: #fafafa;
+                text-align: left;
+            }
+
+            .inquiry-form h2 {
+                font-family: 'Bellefair', serif;
+                font-size: 2.6rem;
+                font-weight: 400;
+                margin: 0 0 2rem;
+                text-align: center;
+            }
+
+            .inquiry-form label {
+                display: block;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin: 1.4rem 0 .4rem;
+                color: #333;
+                text-transform: uppercase;
+                letter-spacing: .12em;
+            }
+
+            .inquiry-form input,
+            .inquiry-form select,
+            .inquiry-form textarea {
+                width: 100%;
+                padding: 1rem;
+                font-size: 1.6rem;
+                font-family: inherit;
+                border: 1px solid #ccc;
+                background: #fff;
+                box-sizing: border-box;
+            }
+
+            .inquiry-form textarea {
+                min-height: 10rem;
+                resize: vertical;
+            }
+
+            .inquiry-form input:focus,
+            .inquiry-form select:focus,
+            .inquiry-form textarea:focus {
+                outline: none;
+                border-color: #492a0a;
+            }
+
+            .inquiry-form .actions {
+                margin-top: 2rem;
+                text-align: center;
+            }
+
+            .inquiry-form button {
+                font-family: inherit;
+                font-size: 1.6rem;
+                padding: 1.2rem 2.4rem;
+                border: none;
+                cursor: pointer;
+                background: #492a0a;
+                color: #fff;
+                transition: background .15s ease;
+            }
+
+            .inquiry-form button:hover {
+                background: #111;
+            }
+
+            .inquiry-form .note {
+                font-size: 1.2rem;
+                color: #777;
+                margin-top: 1.5rem;
+                font-style: italic;
+                text-align: center;
+            }
+        </style>
+
+
+    </head>
+
+
+    <body>
+
+
+        <!-- PRELOADER -->
+        <div class="preloader">
+            <div class="bounce"></div>
+        </div>
+        <!-- /PRELOADER -->
+
+
+        <!-- NAVIGATION BUTTON -->
+        <div class="navigation-button">
+
+             <ul class="nav-menu">
+                 <li><a href="/">home</a></li>
+                 <li><a href="about">about</a></li>
+             </ul>
+
+        </div>
+        <!-- /NAVIGATION BUTTON -->
+
+
+        <!-- ABOUT (re-using the same container/styles for visual consistency) -->
+        <div class="about">
+
+
+            <!-- CONTAINER FLUID -->
+            <div class="container-fluid">
+
+                <a href="/">
+                    <img src="assets/img/logo.png" class="img-responsive" alt="logo">
+                </a>
+
+                <h3>inquiry &amp; packages</h3>
+
+                <!-- TAB BUTTONS -->
+                <div class="package-tabs" role="tablist">
+                    <button type="button" class="package-tab" data-target="panel-mini">Mini Sessions</button>
+                    <button type="button" class="package-tab" data-target="panel-wedding">Wedding Packages</button>
+                    <button type="button" class="package-tab" data-target="panel-booth">Boothbyclairejo Packages</button>
+                </div>
+
+                <!-- PANEL: MINI SESSIONS -->
+                <div class="package-panel" id="panel-mini">
+                    <p><u>MINI SESSIONS</u>
+                        <br><strong>engagement, maternity, family photos, senior photos - $375</strong>
+                        <br>2 rolls of film
+                        <br>72 images
+                        <br>
+                        <br><strong>super8 video - $1,200</strong>
+                        <br>1 roll
+                        <br>3 minutes
+                    </p>
+                </div>
+
+                <!-- PANEL: WEDDING PACKAGES -->
+                <div class="package-panel" id="panel-wedding">
+                    <p>packages include 8-12 hours of wedding-day coverage, my hourly rate, processing and developing fees, and the time spent editing after your special day.
+                        each package is fully customizable so you can get everything you’ve envisioned at the price that feels right for you
+                    </p>
+
+                    <p><u>WEDDING PACKAGES</u>
+                        <br><strong>the more the merrier - $8,190</strong>
+                        <br>20 rolls of film + 2 rolls of super8
+                        <br>720 images, 6 minute wedding video
+                        <br>second photographer
+                        <br>
+                        <br><strong>the right fit - $5,515</strong>
+                        <br>15 rolls of film + 1 roll of super8
+                        <br>540 images, 3 minute wedding video
+                        <br>second photographer
+                        <br>
+                        <br><strong>keep it simple - $4,315</strong>
+                        <br>10 rolls of film + 1 roll of super8
+                        <br>360 images, 3 minute wedding video
+                        <br>
+                        <br><strong>short &amp; sweet - $2,045</strong>
+                        <br>6 rolls of film
+                        <br>216 images
+                    </p>
+                </div>
+
+                <!-- PANEL: BOOTHBYCLAIREJO -->
+                <div class="package-panel" id="panel-booth">
+                    <p>a vintage-inspired photo booth experience for your most memorable events
+                        <br>step back in time with our enclosed, vintage-style photo booth, designed to evoke a classic analog feel - but with modern digital operation. guests will select between color or black &amp; white, and all photo strips are instantly digitized for sharing. whether it's a wedding, birthday, or corporate gathering, we create timeless memories with every snapshot
+                        <br>bringing you a touch of nostalgia to every event
+                    </p>
+
+                    <p><u>BOOTHBYCLAIREJO PACKAGES</u>
+                        <br><strong>classic session – 3 hours $950</strong>
+                        <br>perfect for smaller weddings, birthday parties, and events
+                        <br>enclosed vintage-style photo booth
+                        <br>on-site attendant
+                        <br>unlimited photo strips during rental time
+                        <br>black &amp; white or color photo selection inside booth
+                        <br>full setup + teardown
+                        <br>instant digital captures
+                        <br>
+                        <br><strong>signature session – 4 hours $1,150 (most popular)</strong>
+                        <br>ideal for weddings and standard receptions (200+ guests)
+                        <br>includes everything in classic session, plus
+                        <br>extended coverage for higher guest volume
+                        <br>priority scheduling availability
+                        <br>better flow for peak reception hours
+                        <br>
+                        <br><strong>extended celebration – 5+ hours starting at $1,350</strong>
+                        <br>best for full wedding days, long receptions, and high-traffic events
+                        <br>includes everything in signature session, plus
+                        <br>additional coverage time (customized per event)
+                        <br>best value per hour
+                        <br>ideal for continuous guest rotation throughout the event
+                    </p>
+
+                    <p><u>ENHANCEMENTS &amp; ADD-ONS</u>
+                        <br><strong>full digital gallery $100–$200</strong>
+                        <br>receive every photo captured during your event in a private downloadable gallery
+                        <br>$100 (smaller events)
+                        <br>$150 (standard weddings)
+                        <br>$200 (large guest count / high-volume events)
+                        <br>
+                        <br><strong>additional hour / overtime — $250 per hour</strong>
+                        <br>extend your photo booth rental beyond the contracted time
+                        <br>subject to availability
+                        <br>must be approved prior to extension
+                        <br>payment due before additional time begins
+                        <br>
+                        <br><strong>travel fee — custom quote</strong>
+                        <br>travel fees may apply for locations outside the standard service area
+                        <br>local events (within 20 miles): included
+                        <br>beyond that: calculated based on distance
+                    </p>
+                </div>
+
+
+                <!-- INQUIRY FORM -->
+                <form class="inquiry-form" id="inquiryForm" novalidate>
+                    <h2>send an inquiry</h2>
+
+                    <label for="f-date">requested date</label>
+                    <input type="date" id="f-date" name="date" required>
+
+                    <label for="f-name">your name</label>
+                    <input type="text" id="f-name" name="name" required>
+
+                    <label for="f-email">email</label>
+                    <input type="email" id="f-email" name="email" required>
+
+                    <label for="f-phone">phone (optional)</label>
+                    <input type="tel" id="f-phone" name="phone">
+
+                    <label for="f-type">session type <span style="text-transform:none;letter-spacing:0;font-weight:400;color:#777;">(hold ctrl / cmd to pick more than one)</span></label>
+                    <select id="f-type" name="type" multiple required size="4">
+                        <option>Mini Sessions</option>
+                        <option>Wedding Packages</option>
+                        <option>Boothbyclairejo Packages</option>
+                        <option>Combination</option>
+                    </select>
+
+                    <label for="f-location">location / city</label>
+                    <input type="text" id="f-location" name="location">
+
+                    <label for="f-message">tell me more (vision, timing, anything else)</label>
+                    <textarea id="f-message" name="message"></textarea>
+
+                    <div class="actions">
+                        <button type="submit">send inquiry</button>
+                    </div>
+
+                    <p class="note">submitting will open your email app with the details pre-filled — just hit send.</p>
+                </form>
+
+
+            </div>
+            <!-- /CONTAINER FLUID -->
+
+
+        </div>
+        <!-- /ABOUT -->
+
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="footer-inner">
+                <ul class="social-icons scroll-animated-from-right">
+                    <li><a href="https://www.instagram.com/filmbyclairejo/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /FOOTER -->
+
+
+        <script>
+            // ===== Package tab switching =====
+            (function () {
+                var tabs   = document.querySelectorAll('.package-tab');
+                var panels = document.querySelectorAll('.package-panel');
+
+                tabs.forEach(function (tab) {
+                    tab.addEventListener('click', function () {
+                        var targetId = tab.dataset.target;
+                        tabs.forEach(function (t) { t.classList.remove('active'); });
+                        panels.forEach(function (p) { p.classList.remove('active'); });
+                        tab.classList.add('active');
+                        var panel = document.getElementById(targetId);
+                        if (panel) panel.classList.add('active');
+                    });
+                });
+            })();
+        </script>
+
+
+        <script>
+            (function () {
+                // === CONFIG: change this to your real email ===
+                var BUSINESS_EMAIL = 'clairediede@gmail.com';
+
+                var dateInput = document.getElementById('f-date');
+                var form      = document.getElementById('inquiryForm');
+
+                // Restrict date input to today or later
+                var today = new Date();
+                var yyyy  = today.getFullYear();
+                var mm    = String(today.getMonth() + 1).padStart(2, '0');
+                var dd    = String(today.getDate()).padStart(2, '0');
+                dateInput.min = yyyy + '-' + mm + '-' + dd;
+
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    var dateVal  = dateInput.value;
+                    var name     = document.getElementById('f-name').value.trim();
+                    var email    = document.getElementById('f-email').value.trim();
+                    var phone    = document.getElementById('f-phone').value.trim();
+                    var typeSel  = document.getElementById('f-type');
+                    var types    = Array.prototype.map.call(typeSel.selectedOptions, function (o) { return o.value; });
+                    var location = document.getElementById('f-location').value.trim();
+                    var message  = document.getElementById('f-message').value.trim();
+
+                    if (!dateVal || !name || !email || types.length === 0) {
+                        alert('please fill in the date, your name, email, and at least one session type.');
+                        return;
+                    }
+
+                    var parts  = dateVal.split('-');
+                    var chosen = new Date(parseInt(parts[0],10),
+                                          parseInt(parts[1],10) - 1,
+                                          parseInt(parts[2],10));
+                    var pretty = chosen.toLocaleDateString(undefined, {
+                        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+                    });
+
+                    var subject = 'session inquiry — ' + pretty + ' — ' + name;
+
+                    var body =
+                        'Requested date: ' + pretty + '\n' +
+                        'Session type(s):\n  - ' + types.join('\n  - ') + '\n\n' +
+                        'Name: ' + name + '\n' +
+                        'Email: ' + email + '\n' +
+                        'Phone: ' + (phone || '(not provided)') + '\n' +
+                        'Location: ' + (location || '(not provided)') + '\n\n' +
+                        'Message:\n' + (message || '(none)') + '\n';
+
+                    var mailto = 'mailto:' + BUSINESS_EMAIL +
+                                 '?subject=' + encodeURIComponent(subject) +
+                                 '&body=' + encodeURIComponent(body);
+
+                    window.location.href = mailto;
+                });
+            })();
+        </script>
+
+
+        <!-- SCRIPTS -->
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/main.js"></script>
+
+
+    </body>
+
+
+</html>

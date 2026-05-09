@@ -133,51 +133,60 @@ a:hover
     top: 0;
     right: 0;
 
-    cursor: pointer;
+    width: 15rem;
+    height: 15rem;
+    background: #492a0a;
 }
 
-.navigation-button p
+/* Two stacked options that fill the square */
+.navigation-button .nav-menu
 {
-    font-size: 2.8rem;
-    font-weight: 400;
-    line-height: 9rem;
+    display: flex;
+    flex-direction: column;
 
-    width: 9rem;
-    height: 9rem;
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
+    list-style: none;
+}
 
-    -webkit-transition: .1s ease;
-         -o-transition: .1s ease;
-            transition: .1s ease;
+.navigation-button .nav-menu li
+{
+    flex: 1 1 0;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-button .nav-menu li + li
+{
+    border-top: 1px solid rgba(255, 255, 255, .25);
+}
+
+.navigation-button .nav-menu a
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    font-size: 1.8rem;
+    font-weight: 400;
     text-align: center;
-    letter-spacing: .01em;
-
+    text-decoration: none;
+    letter-spacing: .02em;
     color: #fff;
-    border-radius: 100px;
-    background: none;
+
+    transition: background .15s ease;
 }
 
-.navigation-button p:after
+.navigation-button .nav-menu a:hover,
+.navigation-button .nav-menu a:focus
 {
-    position: absolute;
-    z-index: -2;
-    top: 0;
-    right: 0;
-
-    content: '';
-    -webkit-transition: .1s ease;
-         -o-transition: .1s ease;
-            transition: .1s ease;
-
-    border-width: 0 15rem 15rem 0;
-    border-style: solid;
-    border-color: transparent #492a0a transparent transparent;
-}
-
-.navigation-button p:hover:after
-{
-    border-color: transparent #111 transparent transparent;
+    background: #111;
+    outline: none;
 }
 
 @media (max-width:700px)

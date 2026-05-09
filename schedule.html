@@ -1,0 +1,289 @@
+<!doctype html>
+
+<html lang="en">
+
+
+    <head>
+
+        <!-- META -->
+        <meta charset="utf-8">
+        <meta name="robots" content="noodp">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <!-- PAGE TITLE -->
+        <title>filmbyclairejo - schedule</title>
+
+        <!-- FAVICON -->
+        <link rel="shortcut icon" href="assets/img/icon2.png">
+
+        <!-- FONTS -->
+        <link href="https://fonts.googleapis.com/css?family=Bellefair&amp;subset=latin-ext" rel="stylesheet">
+
+        <!-- STYLESHEETS -->
+        <link rel="stylesheet" type="text/css" href="assets/css/plugins.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+        <style>
+            /* ===== Schedule page ===== */
+            .schedule-page {
+                min-height: 100vh;
+                padding: 6rem 2rem 8rem;
+                background: #fff;
+                color: #111;
+                font-family: 'Bellefair', serif;
+            }
+
+            .schedule-page .schedule-container {
+                max-width: 60rem;
+                margin: 0 auto;
+            }
+
+            .schedule-page h1 {
+                font-size: 4.2rem;
+                font-weight: 400;
+                text-align: center;
+                margin: 0 0 1rem;
+            }
+
+            .schedule-page .subtitle {
+                text-align: center;
+                font-size: 1.7rem;
+                margin: 0 0 4rem;
+                color: #555;
+            }
+
+            /* ----- Inquiry form ----- */
+            .inquiry {
+                padding: 2.5rem;
+                border: 1px solid #ddd;
+                background: #fafafa;
+            }
+
+            .inquiry h2 {
+                font-size: 2.4rem;
+                font-weight: 400;
+                margin: 0 0 2rem;
+            }
+
+            .inquiry label {
+                display: block;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+                font-size: 1.3rem;
+                font-weight: 600;
+                margin: 1.4rem 0 .4rem;
+                color: #333;
+                text-transform: uppercase;
+                letter-spacing: .12em;
+            }
+
+            .inquiry input,
+            .inquiry select,
+            .inquiry textarea {
+                width: 100%;
+                padding: 1rem;
+                font-size: 1.6rem;
+                font-family: inherit;
+                border: 1px solid #ccc;
+                background: #fff;
+                box-sizing: border-box;
+            }
+
+            .inquiry textarea {
+                min-height: 10rem;
+                resize: vertical;
+            }
+
+            .inquiry input:focus,
+            .inquiry select:focus,
+            .inquiry textarea:focus {
+                outline: none;
+                border-color: #492a0a;
+            }
+
+            .inquiry .actions {
+                margin-top: 2rem;
+            }
+
+            .inquiry button {
+                font-family: inherit;
+                font-size: 1.6rem;
+                padding: 1.2rem 2.4rem;
+                border: none;
+                cursor: pointer;
+                transition: background .15s ease;
+                background: #492a0a;
+                color: #fff;
+            }
+
+            .inquiry button:hover {
+                background: #111;
+            }
+
+            .inquiry .note {
+                font-size: 1.3rem;
+                color: #777;
+                margin-top: 1.5rem;
+                font-style: italic;
+            }
+
+            @media (max-width: 600px) {
+                .schedule-page { padding: 4rem 1rem 6rem; }
+                .schedule-page h1 { font-size: 3.4rem; }
+            }
+        </style>
+
+    </head>
+
+
+    <body>
+
+
+        <!-- PRELOADER -->
+        <div class="preloader">
+            <div class="bounce"></div>
+        </div>
+        <!-- /PRELOADER -->
+
+
+        <!-- NAVIGATION BUTTON (close, back to home) -->
+        <div class="navigation-button">
+            <a href="/"><p><i class="fa fa-close" aria-hidden="true"></i></p></a>
+        </div>
+        <!-- /NAVIGATION BUTTON -->
+
+
+        <!-- SCHEDULE -->
+        <div class="schedule-page">
+            <div class="schedule-container">
+
+                <h1>schedule a session</h1>
+                <p class="subtitle">tell me about your shoot and i'll be in touch</p>
+
+                <!-- INQUIRY FORM -->
+                <form class="inquiry" id="inquiryForm" novalidate>
+                    <h2>session inquiry</h2>
+
+                    <label for="f-date">requested date</label>
+                    <input type="date" id="f-date" name="date" required>
+
+                    <label for="f-name">your name</label>
+                    <input type="text" id="f-name" name="name" required>
+
+                    <label for="f-email">email</label>
+                    <input type="email" id="f-email" name="email" required>
+
+                    <label for="f-phone">phone (optional)</label>
+                    <input type="tel" id="f-phone" name="phone">
+
+                    <label for="f-type">session type <span style="text-transform:none;letter-spacing:0;font-weight:400;color:#777;">(hold ctrl / cmd to pick more than one)</span></label>
+                    <select id="f-type" name="type" multiple required size="10">
+                        <optgroup label="Mini Sessions">
+                            <option>engagement, maternity, family photos, senior photos&ndash;$375</option>
+                            <option>super8 video&ndash;$1,200</option>
+                        </optgroup>
+                        <optgroup label="Wedding Packages">
+                            <option>the more the merrier&ndash;$8,190</option>
+                            <option>the right fit&ndash;$5,515</option>
+                            <option>keep it simple&ndash;$4,315</option>
+                            <option>short &amp; sweet&ndash;$2,045</option>
+                        </optgroup>
+                        <optgroup label="Boothbyclairejo Packages">
+                            <option>classic session&ndash;3 hours $950</option>
+                            <option>signature session&ndash;4 hours $1,150 (most popular)</option>
+                            <option>extended celebration&ndash;5+ hours starting at $1,350</option>
+                        </optgroup>
+                        <optgroup label="Enhancements &amp; Add-Ons">
+                            <option>full digital gallery $100&ndash;$200</option>
+                            <option>additional hour / overtime&ndash;$250 per hour</option>
+                            <option>travel fee&ndash;custom quote</option>
+                        </optgroup>
+                    </select>
+
+                    <label for="f-location">location / city</label>
+                    <input type="text" id="f-location" name="location">
+
+                    <label for="f-message">tell me more (vision, timing, anything else)</label>
+                    <textarea id="f-message" name="message"></textarea>
+
+                    <div class="actions">
+                        <button type="submit">send inquiry</button>
+                    </div>
+
+                    <p class="note">submitting will open your email app with the details pre-filled — just hit send.</p>
+                </form>
+
+            </div>
+        </div>
+        <!-- /SCHEDULE -->
+
+
+        <script>
+            (function () {
+                // === CONFIG: change this to your real email ===
+                var BUSINESS_EMAIL = 'YOUR_EMAIL@example.com';
+
+                var dateInput = document.getElementById('f-date');
+                var form      = document.getElementById('inquiryForm');
+
+                // Restrict date input to today or later
+                var today = new Date();
+                var yyyy  = today.getFullYear();
+                var mm    = String(today.getMonth() + 1).padStart(2, '0');
+                var dd    = String(today.getDate()).padStart(2, '0');
+                dateInput.min = yyyy + '-' + mm + '-' + dd;
+
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    var dateVal  = dateInput.value;
+                    var name     = document.getElementById('f-name').value.trim();
+                    var email    = document.getElementById('f-email').value.trim();
+                    var phone    = document.getElementById('f-phone').value.trim();
+                    var typeSel  = document.getElementById('f-type');
+                    var types    = Array.prototype.map.call(typeSel.selectedOptions, function (o) { return o.value; });
+                    var location = document.getElementById('f-location').value.trim();
+                    var message  = document.getElementById('f-message').value.trim();
+
+                    if (!dateVal || !name || !email || types.length === 0) {
+                        alert('please fill in the date, your name, email, and at least one session type.');
+                        return;
+                    }
+
+                    // Pretty-format the chosen date (parse as local, not UTC)
+                    var parts  = dateVal.split('-');
+                    var chosen = new Date(parseInt(parts[0],10),
+                                          parseInt(parts[1],10) - 1,
+                                          parseInt(parts[2],10));
+                    var pretty = chosen.toLocaleDateString(undefined, {
+                        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+                    });
+
+                    var subject = 'session inquiry — ' + pretty + ' — ' + name;
+
+                    var body =
+                        'Requested date: ' + pretty + '\n' +
+                        'Session type(s):\n  - ' + types.join('\n  - ') + '\n\n' +
+                        'Name: ' + name + '\n' +
+                        'Email: ' + email + '\n' +
+                        'Phone: ' + (phone || '(not provided)') + '\n' +
+                        'Location: ' + (location || '(not provided)') + '\n\n' +
+                        'Message:\n' + (message || '(none)') + '\n';
+
+                    var mailto = 'mailto:' + BUSINESS_EMAIL +
+                                 '?subject=' + encodeURIComponent(subject) +
+                                 '&body=' + encodeURIComponent(body);
+
+                    window.location.href = mailto;
+                });
+            })();
+        </script>
+
+
+        <!-- SCRIPTS -->
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/main.js"></script>
+
+
+    </body>
+
+</html>
