@@ -189,6 +189,19 @@ a:hover
     outline: none;
 }
 
+/* Shrink the corner nav on small screens so it doesn't crowd the logo/title */
+@media (max-width: 700px)
+{
+    .navigation-button { width: 11rem; height: 11rem; }
+    .navigation-button .nav-menu a { font-size: 1.6rem; }
+}
+
+@media (max-width: 500px)
+{
+    .navigation-button { width: 9rem; height: 9rem; }
+    .navigation-button .nav-menu a { font-size: 1.5rem; }
+}
+
 @media (max-width:700px)
 {
     html
