@@ -162,6 +162,35 @@
                 font-style: italic;
                 text-align: center;
             }
+
+            /* ===== Session type checkbox group ===== */
+            .inquiry-form .checkbox-group {
+                display: flex;
+                flex-direction: column;
+                gap: .8rem;
+                margin-top: .4rem;
+            }
+
+            .inquiry-form .checkbox-group label {
+                display: flex;
+                align-items: center;
+                gap: .8rem;
+                margin: 0;
+                font-size: 1.5rem;
+                font-weight: 400;
+                text-transform: none;
+                letter-spacing: 0;
+                color: #333;
+                cursor: pointer;
+            }
+
+            .inquiry-form .checkbox-group input[type="checkbox"] {
+                width: auto;
+                margin: 0;
+                padding: 0;
+                accent-color: #492a0a;
+                cursor: pointer;
+            }
         </style>
 
 
@@ -207,7 +236,6 @@
                 <div class="package-tabs" role="tablist">
                     <button type="button" class="package-tab" data-target="panel-mini">Mini Sessions</button>
                     <button type="button" class="package-tab" data-target="panel-wedding">Wedding Packages</button>
-                    <button type="button" class="package-tab" data-target="panel-booth">Boothbyclairejo Packages</button>
                 </div>
                 <p class="package-tabs-hint">select a category to view packages</p>
 
@@ -327,12 +355,11 @@
                     <label for="f-phone">phone (optional)</label>
                     <input type="tel" id="f-phone" name="phone">
 
-                    <label for="f-type">session type <span style="text-transform:none;letter-spacing:0;font-weight:400;color:#777;">(hold ctrl / cmd to pick more than one)</span></label>
-                    <select id="f-type" name="type" multiple required size="3">
-                        <option>Mini Sessions</option>
-                        <option>Wedding Packages</option>
-                        <option>Boothbyclairejo Packages</option>
-                    </select>
+                    <label>session type <span style="text-transform:none;letter-spacing:0;font-weight:400;color:#777;">(check all that apply)</span></label>
+                    <div class="checkbox-group" id="f-type">
+                        <label><input type="checkbox" name="type" value="Mini Sessions"> Mini Sessions</label>
+                        <label><input type="checkbox" name="type" value="Wedding Packages"> Wedding Packages</label>
+                    </div>
 
                     <label for="f-location">location / city</label>
                     <input type="text" id="f-location" name="location">
@@ -376,8 +403,10 @@
                 tabs.forEach(function (tab) {
                     tab.addEventListener('click', function () {
                         var targetId = tab.dataset.target;
+                        var isActive = tab.classList.contains('active');
                         tabs.forEach(function (t) { t.classList.remove('active'); });
                         panels.forEach(function (p) { p.classList.remove('active'); });
+                        if (isActive) return; // clicking the active tab closes it
                         tab.classList.add('active');
                         var panel = document.getElementById(targetId);
                         if (panel) panel.classList.add('active');
@@ -409,10 +438,10 @@
                     var name     = document.getElementById('f-name').value.trim();
                     var email    = document.getElementById('f-email').value.trim();
                     var phone    = document.getElementById('f-phone').value.trim();
-                    var typeSel  = document.getElementById('f-type');
-                    var types    = Array.prototype.map.call(typeSel.selectedOptions, function (o) { return o.value; });
                     var location = document.getElementById('f-location').value.trim();
                     var message  = document.getElementById('f-message').value.trim();
+                    var typeBoxes = document.querySelectorAll('#f-type input[type="checkbox"]:checked');
+                    var types     = Array.prototype.map.call(typeBoxes, function (b) { return b.value; });
 
                     if (!dateVal || !name || !email || types.length === 0) {
                         alert('please fill in the date, your name, email, and at least one session type.');
