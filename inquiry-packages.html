@@ -341,9 +341,6 @@
                     <label for="f-name">your name</label>
                     <input type="text" id="f-name" name="name" required>
 
-                    <label for="f-email">email</label>
-                    <input type="email" id="f-email" name="email" required>
-
                     <label for="f-phone">phone (optional)</label>
                     <input type="tel" id="f-phone" name="phone">
 
@@ -429,15 +426,14 @@
 
                     var dateVal  = dateInput.value;
                     var name     = document.getElementById('f-name').value.trim();
-                    var email    = document.getElementById('f-email').value.trim();
                     var phone    = document.getElementById('f-phone').value.trim();
                     var location = document.getElementById('f-location').value.trim();
                     var message  = document.getElementById('f-message').value.trim();
                     var typeBoxes = document.querySelectorAll('#f-type input[type="checkbox"]:checked');
                     var types     = Array.prototype.map.call(typeBoxes, function (b) { return b.value; });
 
-                    if (!dateVal || !name || !email || types.length === 0) {
-                        alert('please fill in the date, your name, email, and at least one session type.');
+                    if (!dateVal || !name || types.length === 0) {
+                        alert('please fill in the date, your name, and at least one session type.');
                         return;
                     }
 
@@ -455,7 +451,6 @@
                         'Requested date: ' + pretty + '\n' +
                         'Session type(s):\n  - ' + types.join('\n  - ') + '\n\n' +
                         'Name: ' + name + '\n' +
-                        'Email: ' + email + '\n' +
                         'Phone: ' + (phone || '(not provided)') + '\n' +
                         'Location: ' + (location || '(not provided)') + '\n\n' +
                         'Message:\n' + (message || '(none)') + '\n';
