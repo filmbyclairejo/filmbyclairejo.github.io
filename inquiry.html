@@ -359,8 +359,10 @@
                     <select id="f-session" name="session" required>
                         <option value="" selected disabled>Select an option</option>
                         <option value="Wedding">Wedding</option>
-                        <option value="Couple">Couple</option>
-                        <option value="Family">Family</option>
+                        <option value="Photobooth">Photobooth</option>
+                        <option value="Maternity">Maternity</option>
+                        <option value="Newborn">Newborn</option>
+                        <option value="Senior Photos">Senior Photos</option>
                         <option value="Brand">Brand</option>
                         <option value="Other">Other</option>
                     </select>
@@ -386,6 +388,13 @@
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
                         <option value="What's Super 8?">What's Super 8?</option>
+                    </select>
+
+                    <label for="f-photobooth">are you interested in adding a Photobooth? <span class="required-note">(required)</span></label>
+                    <select id="f-photobooth" name="photobooth" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
                     </select>
 
                     <label for="f-budget">estimated photography budget <span class="required-note">(required)</span></label>
@@ -491,6 +500,7 @@
                     var medium       = document.getElementById('f-medium').value;
                     var bookingStage = document.getElementById('f-booking-stage').value;
                     var super8       = document.getElementById('f-super8').value;
+                    var photobooth   = document.getElementById('f-photobooth').value;
                     var budget       = document.getElementById('f-budget').value.trim();
                     var venue        = document.getElementById('f-venue').value.trim();
                     var referral     = document.getElementById('f-referral').value.trim();
@@ -515,6 +525,7 @@
                         'Medium: ' + medium + '\n' +
                         'Booking stage: ' + bookingStage + '\n' +
                         'Interested in Super 8: ' + super8 + '\n' +
+                        'Interested in a Photobooth: ' + photobooth + '\n' +
                         'Estimated photography budget: ' + budget + '\n' +
                         'Desired date: ' + pretty + '\n' +
                         'Venue: ' + venue + '\n' +
