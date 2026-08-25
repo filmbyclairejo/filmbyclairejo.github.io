@@ -12,7 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
         <!-- PAGE TITLE -->
-        <title>filmbyclairejo &mdash; inquiry &amp; packages</title>
+        <title>filmbyclairejo &mdash; inquiry</title>
 
         <!-- FAVICON -->
         <link rel="shortcut icon" href="assets/img/logo2.png">
@@ -113,6 +113,31 @@
                 letter-spacing: .12em;
             }
 
+            .inquiry-form .name-row {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+
+            .inquiry-form .name-row label {
+                margin-top: 0;
+            }
+
+            .inquiry-form .required-note,
+            .inquiry-form .field-note {
+                font-weight: 400;
+                color: #777;
+                text-transform: none;
+                letter-spacing: 0;
+            }
+
+            .inquiry-form .field-note {
+                display: block;
+                margin: -.1rem 0 .6rem;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+                font-size: 1.2rem;
+            }
+
             .inquiry-form input,
             .inquiry-form select,
             .inquiry-form textarea {
@@ -169,33 +194,15 @@
                 margin-top: .3rem;
             }
 
-            /* ===== Session type checkbox group ===== */
-            .inquiry-form .checkbox-group {
-                display: flex;
-                flex-direction: column;
-                gap: .8rem;
-                margin-top: .4rem;
-            }
+            @media (max-width: 600px) {
+                .inquiry-form .name-row {
+                    grid-template-columns: 1fr;
+                    gap: 0;
+                }
 
-            .inquiry-form .checkbox-group label {
-                display: flex;
-                align-items: center;
-                gap: .8rem;
-                margin: 0;
-                font-size: 1.5rem;
-                font-weight: 400;
-                text-transform: none;
-                letter-spacing: 0;
-                color: #333;
-                cursor: pointer;
-            }
-
-            .inquiry-form .checkbox-group input[type="checkbox"] {
-                width: auto;
-                margin: 0;
-                padding: 0;
-                accent-color: #492a0a;
-                cursor: pointer;
+                .inquiry-form .name-row label + label {
+                    margin-top: 1.4rem;
+                }
             }
         </style>
 
@@ -236,24 +243,23 @@
                     <img src="assets/img/logo.jpg" class="img-responsive" alt="logo">
                 </a>
 
-                <h3>inquiry &amp; packages</h3>
+                <h3>inquiry</h3>
 
                 <!-- TAB BUTTONS -->
                 <div class="package-tabs" role="tablist">
                     <button type="button" class="package-tab" data-target="panel-mini">Mini Sessions</button>
-                    <button type="button" class="package-tab" data-target="panel-wedding">Wedding Packages</button>
+                    <button type="button" class="package-tab" data-target="panel-wedding">Weddings</button>
                     <button type="button" class="package-tab" data-target="panel-booth">BoothbyClaireJo</button>
                 </div>
-                <p class="package-tabs-hint">select a category to view packages</p>
 
                 <!-- PANEL: MINI SESSIONS -->
                 <div class="package-panel" id="panel-mini">
                     <p><u>MINI SESSIONS</u>
-                        <br><strong>engagement, maternity, family photos, senior photos - $375</strong>
+                        <br><strong>engagement, maternity, family photos, senior photos</strong>
                         <br>2 rolls of film
                         <br>72 images
                         <br>
-                        <br><strong>super8 video - $1,200</strong>
+                        <br><strong>super8 video</strong>
                         <br>1 roll
                         <br>3 minutes
                     </p>
@@ -265,22 +271,22 @@
                         each package is fully customizable so you can get everything you’ve envisioned at the price that feels right for you
                     </p>
 
-                    <p><u>WEDDING PACKAGES</u>
-                        <br><strong>the more the merrier - $8,190</strong>
+                    <p><u>WEDDINGS</u>
+                        <br><strong>the more the merrier</strong>
                         <br>20 rolls of film + 2 rolls of super8
                         <br>720 images, 6 minute wedding video
                         <br>second photographer
                         <br>
-                        <br><strong>the right fit - $5,515</strong>
+                        <br><strong>the right fit</strong>
                         <br>15 rolls of film + 1 roll of super8
                         <br>540 images, 3 minute wedding video
                         <br>second photographer
                         <br>
-                        <br><strong>keep it simple - $4,315</strong>
+                        <br><strong>keep it simple</strong>
                         <br>10 rolls of film + 1 roll of super8
                         <br>360 images, 3 minute wedding video
                         <br>
-                        <br><strong>short &amp; sweet - $2,045</strong>
+                        <br><strong>short &amp; sweet</strong>
                         <br>6 rolls of film
                         <br>216 images
                     </p>
@@ -294,7 +300,6 @@
                     </p>
 
                     <p><u>BOOTHBYCLAIREJO PACKAGE</u>
-                        <br><strong>starting at $1200</strong>
                         <br>3 hours
                         <br>enclosed vintage-style photo booth
                         <br>on-site attendant
@@ -305,22 +310,17 @@
                     </p>
 
                     <p><u>ENHANCEMENTS &amp; ADD-ONS</u>
-                        <br><strong>full digital gallery $100—$200</strong>
+                        <br><strong>full digital gallery</strong>
                         <br>receive every photo captured during your event in a private downloadable gallery
-                        <br>$100 (smaller events)
-                        <br>$150 (standard weddings)
-                        <br>$200 (large guest count / high-volume events)
-                        <br>
-                        <br><strong>additional hour / overtime — $250 per hour</strong>
                         <br>extend your photo booth rental beyond the contracted time
                         <br>subject to availability
                         <br>must be approved prior to extension
                         <br>payment due before additional time begins
                         <br>
-                        <br><strong>custom logo on photo strips — $100</strong>
+                        <br><strong>custom logo on photo strips</strong>
                         <br>a personalized name, date, logo, or phrase of your choosing printed on each photo strip
                         <br>
-                        <br><strong>custom neon sign — $175</strong>
+                        <br><strong>custom neon sign</strong>
                         <br>a personalized neon sign featuring your last name (or a phrase of your choice) 
                         <br>displayed on the booth throughout the event
                         <br>doubles as a stunning backdrop and a one-of-a-kind keepsake
@@ -336,29 +336,76 @@
 
 
                 <!-- INQUIRY FORM -->
-                <form class="inquiry-form" id="inquiryForm" novalidate>
+                <form class="inquiry-form" id="inquiryForm">
                     <h2>send an inquiry</h2>
 
-                    <label for="f-date">requested date</label>
-                    <input type="date" id="f-date" name="date" required>
-
-                    <label for="f-name">your name</label>
-                    <input type="text" id="f-name" name="name" required>
-
-                    <label for="f-phone">phone (optional)</label>
-                    <input type="tel" id="f-phone" name="phone">
-
-                    <label>session type <span style="text-transform:none;letter-spacing:0;font-weight:400;color:#777;">(check all that apply)</span></label>
-                    <div class="checkbox-group" id="f-type">
-                        <label><input type="checkbox" name="type" value="Mini Sessions"> Mini Sessions</label>
-                        <label><input type="checkbox" name="type" value="Wedding Packages"> Wedding Packages</label>
-                        <label><input type="checkbox" name="type" value="boothbyclairejo"> boothbyclairejo</label>
+                    <label>name <span class="required-note">(required)</span></label>
+                    <div class="name-row">
+                        <label for="f-first-name">first name
+                            <input type="text" id="f-first-name" name="firstName" autocomplete="given-name" required>
+                        </label>
+                        <label for="f-last-name">last name
+                            <input type="text" id="f-last-name" name="lastName" autocomplete="family-name" required>
+                        </label>
                     </div>
 
-                    <label for="f-location">location / city</label>
-                    <input type="text" id="f-location" name="location">
+                    <label for="f-email">email <span class="required-note">(required)</span></label>
+                    <input type="email" id="f-email" name="email" autocomplete="email" required>
 
-                    <label for="f-message">tell me more (vision, timing, anything else)</label>
+                    <label for="f-phone">phone <span class="required-note">(required)</span></label>
+                    <input type="tel" id="f-phone" name="phone" autocomplete="tel" required>
+
+                    <label for="f-session">what type of session? <span class="required-note">(required)</span></label>
+                    <select id="f-session" name="session" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="Wedding">Wedding</option>
+                        <option value="Couple">Couple</option>
+                        <option value="Family">Family</option>
+                        <option value="Brand">Brand</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <label for="f-medium">what mediums are you interested in? <span class="required-note">(required)</span></label>
+                    <select id="f-medium" name="medium" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="Film and Digital">Film and Digital</option>
+                        <option value="Film Only">Film Only</option>
+                    </select>
+
+                    <label for="f-booking-stage">where are you at in the booking process? <span class="required-note">(required)</span></label>
+                    <select id="f-booking-stage" name="bookingStage" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="Shopping around">Shopping around</option>
+                        <option value="I have some questions">I have some questions</option>
+                        <option value="Ready to book">Ready to book</option>
+                    </select>
+
+                    <label for="f-super8">are you interested in adding Super 8? <span class="required-note">(required)</span></label>
+                    <select id="f-super8" name="super8" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="What's Super 8?">What's Super 8?</option>
+                    </select>
+
+                    <label for="f-budget">estimated photography budget <span class="required-note">(required)</span></label>
+                    <span class="field-note">Please view detailed pricing above.</span>
+                    <input type="text" id="f-budget" name="budget" required>
+
+                    <label for="f-date">desired date <span class="required-note">(required)</span></label>
+                    <input type="date" id="f-date" name="date" required>
+
+                    <label for="f-venue">venue <span class="required-note">(required)</span></label>
+                    <input type="text" id="f-venue" name="venue" required>
+
+                    <label for="f-referral">how did you hear about Claire? <span class="required-note">(required)</span></label>
+                    <input type="text" id="f-referral" name="referral" required>
+
+                    <label for="f-instagram">instagram <span class="required-note">(required)</span></label>
+                    <input type="text" id="f-instagram" name="instagram" required>
+
+                    <label for="f-message">message</label>
+                    <span class="field-note">Any important information you want to share with Claire?</span>
                     <textarea id="f-message" name="message"></textarea>
 
                     <div class="actions">
@@ -429,18 +476,26 @@
                 form.addEventListener('submit', function (e) {
                     e.preventDefault();
 
-                    var dateVal  = dateInput.value;
-                    var name     = document.getElementById('f-name').value.trim();
-                    var phone    = document.getElementById('f-phone').value.trim();
-                    var location = document.getElementById('f-location').value.trim();
-                    var message  = document.getElementById('f-message').value.trim();
-                    var typeBoxes = document.querySelectorAll('#f-type input[type="checkbox"]:checked');
-                    var types     = Array.prototype.map.call(typeBoxes, function (b) { return b.value; });
-
-                    if (!dateVal || !name || types.length === 0) {
-                        alert('please fill in the date, your name, and at least one session type.');
+                    if (!form.checkValidity()) {
+                        form.reportValidity();
                         return;
                     }
+
+                    var dateVal      = dateInput.value;
+                    var firstName    = document.getElementById('f-first-name').value.trim();
+                    var lastName     = document.getElementById('f-last-name').value.trim();
+                    var name         = firstName + ' ' + lastName;
+                    var email        = document.getElementById('f-email').value.trim();
+                    var phone        = document.getElementById('f-phone').value.trim();
+                    var session      = document.getElementById('f-session').value;
+                    var medium       = document.getElementById('f-medium').value;
+                    var bookingStage = document.getElementById('f-booking-stage').value;
+                    var super8       = document.getElementById('f-super8').value;
+                    var budget       = document.getElementById('f-budget').value.trim();
+                    var venue        = document.getElementById('f-venue').value.trim();
+                    var referral     = document.getElementById('f-referral').value.trim();
+                    var instagram    = document.getElementById('f-instagram').value.trim();
+                    var message      = document.getElementById('f-message').value.trim();
 
                     var parts  = dateVal.split('-');
                     var chosen = new Date(parseInt(parts[0],10),
@@ -453,11 +508,18 @@
                     var subject = 'filmbyclairejo inquiry — ' + pretty + ' — ' + name;
 
                     var body =
-                        'Requested date: ' + pretty + '\n' +
-                        'Session type(s):\n  - ' + types.join('\n  - ') + '\n\n' +
                         'Name: ' + name + '\n' +
-                        'Phone: ' + (phone || '(not provided)') + '\n' +
-                        'Location: ' + (location || '(not provided)') + '\n\n' +
+                        'Email: ' + email + '\n' +
+                        'Phone: ' + phone + '\n\n' +
+                        'Session type: ' + session + '\n' +
+                        'Medium: ' + medium + '\n' +
+                        'Booking stage: ' + bookingStage + '\n' +
+                        'Interested in Super 8: ' + super8 + '\n' +
+                        'Estimated photography budget: ' + budget + '\n' +
+                        'Desired date: ' + pretty + '\n' +
+                        'Venue: ' + venue + '\n' +
+                        'How they heard about Claire: ' + referral + '\n' +
+                        'Instagram: ' + instagram + '\n\n' +
                         'Message:\n' + (message || '(none)') + '\n';
 
                     var mailto = 'mailto:' + BUSINESS_EMAIL +
