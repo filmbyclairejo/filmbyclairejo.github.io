@@ -463,6 +463,32 @@ a:hover
     margin: 0;
 }
 
+.hero .front-content .hero-copy-line
+{
+    display: block;
+    padding: 0;
+
+    white-space: nowrap;
+
+    color: #000;
+    border-radius: 0;
+    background: transparent;
+}
+
+@media (max-width:700px)
+{
+    .hero .front-content
+    {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .hero .front-content h1
+    {
+        font-size: 3.35vw;
+    }
+}
+
 .hero .front-content h1 span
 {
     line-height: 1.4em;
